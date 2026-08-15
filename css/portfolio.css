@@ -1,0 +1,180 @@
+/* Portfolio — Figma Hero nuotrauka: 1440×520 at (0, 0) */
+
+.portfolio-hero {
+  position: relative;
+  height: 520px;
+  overflow: hidden;
+  background: #8b8b8b;
+}
+
+.portfolio-hero .hero__img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.portfolio-hero__title {
+  font-size: 49px;
+  line-height: 56px;
+  font-weight: 400;
+  color: var(--text);
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+.portfolio-page__header {
+  padding: 40px var(--pad-x) 80px;
+}
+
+.portfolio-page__subheading {
+  font-size: 21px;
+  line-height: 24px;
+  max-width: 720px;
+  color: var(--text);
+}
+
+.portfolio-page__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  padding: 0 var(--pad-x) 136px;
+}
+
+.portfolio-page__item {
+  width: 100%;
+  aspect-ratio: 288 / 368;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+}
+
+.portfolio-page__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.28s ease, opacity 0.28s ease;
+}
+
+.portfolio-page__item:hover img {
+  opacity: 0.92;
+  transform: scale(1.02);
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.55);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.28s ease, visibility 0.28s ease;
+}
+
+.lightbox.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox__panel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 64px 64px;
+  background: var(--sand);
+  width: 100%;
+  height: 100%;
+}
+
+.lightbox__close,
+.lightbox__nav {
+  width: 32px;
+  height: 32px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  background: transparent center / contain no-repeat;
+  flex-shrink: 0;
+}
+
+.lightbox__close {
+  position: absolute;
+  top: 23px;
+  right: 23px;
+  background-image: url("../public/images/icon-close.svg");
+}
+
+.lightbox__nav--prev,
+.lightbox__nav--next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.lightbox__nav--prev {
+  left: 16px;
+  background-image: url("../public/images/icon-left.svg");
+}
+
+.lightbox__nav--next {
+  right: 16px;
+  background-image: url("../public/images/icon-right.svg");
+}
+
+.lightbox__nav:hover,
+.lightbox__close:hover { opacity: 0.7; }
+
+.lightbox__figure {
+  width: min(840px, calc(100vw - 96px), calc((100vh - 96px) * 288 / 368));
+  aspect-ratio: 288 / 368;
+  max-height: calc(100vh - 96px);
+  margin: 0 auto;
+}
+
+.lightbox__image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.lightbox__counter {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  line-height: 24px;
+}
+
+@media (max-width: 1320px) {
+  .portfolio-page__grid { grid-template-columns: repeat(3, 1fr); }
+  .portfolio-page__item { width: 100%; height: auto; aspect-ratio: 288 / 368; }
+}
+
+@media (max-width: 900px) {
+  .portfolio-page__grid { grid-template-columns: repeat(2, 1fr); }
+  .lightbox__panel { padding: 40px 12px 56px; }
+  .lightbox__nav--prev { left: 8px; }
+  .lightbox__nav--next { right: 8px; }
+  .lightbox__figure {
+    width: min(840px, calc(100vw - 64px), calc((100vh - 80px) * 288 / 368));
+    max-height: calc(100vh - 80px);
+  }
+}
+
+@media (max-width: 600px) {
+  .portfolio-hero { height: 320px; }
+  .portfolio-hero .hero__img { height: 320px; }
+  .portfolio-hero__title { font-size: 32px; line-height: 40px; margin-bottom: 16px; }
+  .portfolio-page__header { padding: 28px var(--pad-x) 48px; }
+  .portfolio-page__grid { grid-template-columns: 1fr; }
+}

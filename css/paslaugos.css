@@ -1,0 +1,212 @@
+/* Paslaugos — measured from the 1:1 Figma export (frame 1440x2520).
+   Comments give the page-absolute y from that frame. */
+
+body, .page { background: var(--white); }
+
+.services-hero {
+  position: relative;
+  height: 520px;
+  overflow: hidden;
+  background: #8b8b8b;
+}
+
+.services-hero .hero__img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+}
+
+.services-page__header {
+  padding: 40px var(--pad-x) 24px;
+}
+
+.services-page {
+  padding: 24px var(--pad-r) 128px var(--pad-x);
+}
+
+.services-page__heading {
+  font-size: 65px;
+  line-height: 72px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.services-page__grid {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 80px;
+}
+
+.services-page__row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.svc-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  max-width: calc((100% - 24px) / 2);
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+/* Overhangs the sand box: Figma places the label box at y = card top - 36. */
+.svc-card__label {
+  position: absolute;
+  left: 0;
+  top: -24px;
+  font-size: 43px;
+  line-height: 48px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.svc-card__body {
+  background: var(--sand);
+  min-height: 328px;
+  padding: 72px 44px 0;
+  flex: 1;
+}
+
+.svc-card__price {
+  font-size: 31px;
+  line-height: 35px;
+  text-align: center;
+  margin-top: 0;
+}
+
+.svc-card__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  height: 24px;
+  margin-top: 12px;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  text-align: left;
+  color: inherit;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* Only the first row carries a rule, matching the design. */
+.svc-card__row:first-of-type {
+  height: 36px;
+  margin-top: 36px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--text);
+}
+
+.svc-card__icon {
+  width: 16px;
+  height: 16px;
+  margin: 4px 2px 0 0;
+}
+
+.svc-card__details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+.svc-card__details.is-open { max-height: 640px; padding: 12px 0 4px; }
+
+.svc-card__details ul {
+  list-style: none;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.svc-card__details li {
+  padding-left: 16px;
+  position: relative;
+}
+
+.svc-card__details li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+}
+
+/* Straddles the sand box: baseline at y=1658, 18px below its top edge. */
+.pricelist__heading {
+  font-size: 65px;
+  line-height: 72px;
+  font-weight: 400;
+  margin: 38.7px 0 -30.7px 1px;
+}
+
+.pricelist__box {
+  background: var(--sand);
+  min-height: 464px;
+  padding: 0 24px;
+}
+
+.pricelist__table {
+  position: relative;
+  display: grid;
+  grid-template-columns: 434px 1fr;
+  padding-top: 74px;
+}
+
+.pricelist__names,
+.pricelist__prices {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pricelist__names { font-size: 17px; line-height: 24px; }
+.pricelist__prices { font-size: 16px; line-height: 24px; padding-left: 20px; }
+
+.pricelist__names li { padding-left: 11px; position: relative; }
+.pricelist__names li::before {
+  content: "·";
+  position: absolute;
+  left: 0;
+}
+
+.pricelist__rule {
+  position: absolute;
+  top: 71px;
+  left: 434px;
+  width: 1px;
+  height: 268px;
+  background: var(--rule);
+}
+
+.pricelist__note {
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 45.26px;
+}
+
+@media (max-width: 768px) {
+  .services-hero { height: 300px; }
+  .services-hero .hero__img { height: 300px; }
+  .services-page__header { padding: 40px var(--pad-x) 16px; }
+  .services-page { padding-top: 16px; }
+  .services-page__heading { font-size: 32px; line-height: 40px; }
+  .pricelist__heading { font-size: 32px; line-height: 40px; margin: 48px 0 16px; }
+  .services-page__row { flex-direction: column; }
+  .svc-card { width: 100%; max-width: none; }
+  .svc-card__label { position: static; font-size: 26px; line-height: 31px; }
+  .svc-card__body { padding: 24px 20px; min-height: 0; }
+  .svc-card__row:first-of-type { margin-top: 24px; }
+  .pricelist__box { padding: 24px 20px; min-height: 0; }
+  .pricelist__table { grid-template-columns: 1fr; padding-top: 0; }
+  .pricelist__rule { display: none; }
+  .pricelist__prices { padding-left: 11px; padding-top: 16px; }
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio — mēs.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/shared.css">
+  <link rel="stylesheet" href="css/portfolio.css">
+</head>
+<body>
+  <div class="page">
+    <header class="nav nav--overlay">
+      <div class="nav__bar">
+        <button class="nav__toggle" type="button" aria-label="Meniu" aria-expanded="false"><span></span></button>
+        <nav class="nav__links" aria-label="Pagrindinė navigacija">
+          <a href="index.html" class="nav__link">Pagrindinis</a>
+          <a href="portfolio.html" class="nav__link nav__link--active">Portfolio</a>
+          <a href="paslaugos.html" class="nav__link">Paslaugos</a>
+          <a href="kontaktai.html" class="nav__link">Kontaktai</a>
+        </nav>
+      </div>
+      <div class="nav__line"></div>
+    </header>
+
+    <section class="portfolio-hero" aria-label="Portfolio">
+      <img class="hero__img" src="public/images/portfolio-hero.png" alt="" width="1440" height="520">
+    </section>
+
+    <section class="portfolio-page__header">
+      <h1 class="portfolio-hero__title">Mūsų kuriamos erdvės</h1>
+      <p class="portfolio-page__subheading">Gyvenamųjų ir komercinių interjerų projektai, kuriuose dera estetika, funkcionalumas ir individualūs sprendimai.</p>
+    </section>
+
+    <div class="portfolio-page__grid" id="gallery"></div>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Nuotraukos peržiūra">
+      <div class="lightbox__panel">
+        <button type="button" class="lightbox__close" aria-label="Uždaryti"></button>
+        <button type="button" class="lightbox__nav lightbox__nav--prev" aria-label="Ankstesnė"></button>
+        <figure class="lightbox__figure">
+          <img class="lightbox__image" alt="Portfolio nuotrauka">
+        </figure>
+        <button type="button" class="lightbox__nav lightbox__nav--next" aria-label="Kita"></button>
+        <p class="lightbox__counter"></p>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer__line"></div>
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <p class="footer__copyright">©2026 Visos teisės saugomos</p>
+        </div>
+        <div class="footer__cols">
+          <div class="footer__col footer__col--nav">
+            <h4 class="footer__title">Nuorodos</h4>
+            <nav class="footer__nav">
+              <a href="index.html">Pagrindinis</a>
+              <a href="portfolio.html">Portfolio</a>
+              <a href="paslaugos.html">Paslaugos</a>
+              <a href="kontaktai.html">Kontaktai</a>
+            </nav>
+          </div>
+          <div class="footer__col footer__col--contact">
+            <h4 class="footer__title">Kontaktai</h4>
+            <div class="footer__contacts">
+              <div class="footer__contact"><img src="public/images/icon-letter.svg" alt=""><span>El.paštas: gintare@messduija.lt</span></div>
+              <div class="footer__contact"><img src="public/images/icon-phone.svg" alt=""><span>Telefonas: +370 67824470</span></div>
+              <div class="footer__contact"><img src="public/images/icon-instagram.svg" alt=""><a href="https://www.instagram.com/mes.studija/" target="_blank" rel="noopener noreferrer">Instagram: @mes.studija</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="js/site.js"></script>
+  <script src="js/portfolio.js"></script>
+</body>
+</html>
