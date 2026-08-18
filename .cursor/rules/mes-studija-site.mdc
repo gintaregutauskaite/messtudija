@@ -1,0 +1,49 @@
+---
+description: mēs. studio site — stack, pages, deploy, and editing rules
+alwaysApply: true
+---
+
+# mēs. interjero dizaino studija — project context
+
+Static Lithuanian interior-design studio website. No React, no bundler, no build step.
+
+## Pages
+
+| File | Purpose |
+|------|---------|
+| `index.html` | Home — hero with `mes.` + tilde over **e**, vision, portfolio preview, about |
+| `paslaugos.html` | Services — 4 cards (Mini/Midi/Kūrybinis/Pilnas), pricelist |
+| `portfolio.html` | 36-image grid + lightbox |
+| `kontaktai.html` | Contact form (Formspree) + details |
+
+Shared: `css/shared.css` (nav, footer, buttons). Page CSS: `css/home.css`, `paslaugos.css`, `portfolio.css`, `kontaktai.css`. JS: `js/site.js` (nav), page-specific scripts.
+
+## Design
+
+- Canvas **1440px** wide; content gutter `--pad-x: 109px`, `--pad-r: 107px`
+- Font: **Montserrat** (Google Fonts)
+- Colors: cream `#FFFBF4`, sand `#F6F1E7`, text `#11120D`, brown `#523F31`
+- Heroes: full-bleed photos; page titles sit **below** hero on background (not overlapping photo)
+- Service cards: large label (`svc-card__label`) + price only — no duplicate `h3` title inside body
+
+## Images
+
+- Site assets: `public/images/` and `public/images/portfolio/01.png`–`36.png`
+- Never commit: `design.fig`, `public/images/_fig-originals/`, secrets
+
+## Deploy workflow
+
+1. Edit → save → preview locally: `python -m http.server 8080 --bind 127.0.0.1`
+2. `git add .` → `git commit -m "..."` → `git push origin main`
+3. **Netlify** (Gintarė's account) auto-deploys from GitHub — build command **empty**, publish **root**
+4. Hard-refresh live site after deploy
+
+Repo: `github.com/gintaregutauskaite/messtudija` (public). Human setup steps: `SETUP-GUIDE.md`. Site details: `SITE-NOTES.md`.
+
+## When editing
+
+- Match existing patterns; minimal diffs
+- Keep copy in **Lithuanian**
+- Contact email on site: `gintare@messduija.lt` — update all footers + kontaktai if changed
+- Instagram: `@mes.studija` → `https://www.instagram.com/mes.studija/`
+- Do not create git commits unless the user asks
