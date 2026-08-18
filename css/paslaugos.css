@@ -193,6 +193,30 @@ body, .page { background: var(--white); }
   margin-top: 45.26px;
 }
 
+/* Phone-only pricelist — hidden on desktop/tablet */
+.pricelist--mobile { display: none; }
+
+.pricelist__mobile-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 24px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.pricelist__mobile-list li {
+  padding-left: 11px;
+  position: relative;
+}
+
+.pricelist__mobile-list li::before {
+  content: "·";
+  position: absolute;
+  left: 0;
+}
+
 @media (max-width: 768px) {
   .services-hero { height: 300px; }
   .services-hero .hero__img { height: 300px; }
@@ -205,8 +229,9 @@ body, .page { background: var(--white); }
   .svc-card__label { position: static; font-size: 26px; line-height: 31px; }
   .svc-card__body { padding: 24px 20px; min-height: 0; }
   .svc-card__row:first-of-type { margin-top: 24px; }
+  .pricelist--desktop { display: none; }
+  .pricelist--mobile { display: block; }
   .pricelist__box { padding: 24px 20px; min-height: 0; }
-  .pricelist__table { grid-template-columns: 1fr; padding-top: 0; }
-  .pricelist__rule { display: none; }
-  .pricelist__prices { padding-left: 11px; padding-top: 16px; }
+  .pricelist__mobile-list { padding-top: 0; }
+  .pricelist__note { margin-top: 24px; }
 }
