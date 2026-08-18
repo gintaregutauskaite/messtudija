@@ -286,8 +286,25 @@ button, input, textarea { font-family: inherit; }
 @media (max-width: 768px) {
   :root { --pad-x: 24px; --pad-r: 24px; }
 
-  .nav__bar { padding-right: var(--pad-x); }
-  .nav__toggle { display: block; }
+  .nav__bar {
+    height: 36px;
+    padding: 0 var(--pad-x);
+  }
+
+  .nav__toggle {
+    display: block;
+    width: 36px;
+    height: 36px;
+  }
+
+  .nav__toggle span {
+    top: 50%;
+    left: 7px;
+    transform: translateY(-50%);
+  }
+
+  .nav__toggle span::before { top: -6px; }
+  .nav__toggle span::after { top: 6px; }
 
   .nav__links .nav__link:nth-child(n) { width: auto; }
 

@@ -233,4 +233,25 @@
   .vision__heading,
   .about__heading { font-size: 32px; line-height: 40px; }
   .about__name { font-size: 28px; line-height: 32px; }
+
+  .hero__brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0;
+  }
+
+  .hero__logo,
+  .hero__tag {
+    position: static;
+    left: auto;
+    top: auto;
+    width: auto;
+    transform: none;
+  }
+
+  .hero__tag {
+    margin-top: 8px;
+  }
 }
