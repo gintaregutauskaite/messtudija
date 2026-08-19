@@ -2,7 +2,6 @@
 
 .hero {
   position: relative;
-  width: 100%;
   aspect-ratio: 1440 / 672;
   height: auto;
   overflow: hidden;
@@ -253,5 +252,34 @@
 
   .hero__tag {
     margin-top: 8px;
+  }
+}
+
+@media (min-width: 1441px) {
+  .hero__brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero__logo,
+  .hero__tag {
+    position: static;
+    left: auto;
+    top: auto;
+    width: auto;
+    transform: none;
+  }
+
+  .hero__logo {
+    font-size: 170px;
+    line-height: 96px;
+  }
+
+  .hero__tag {
+    margin-top: 8px;
+    font-size: 15px;
+    line-height: 40px;
   }
 }
