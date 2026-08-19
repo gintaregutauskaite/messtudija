@@ -328,8 +328,7 @@ Website contact form uses **Formspree**, not Hostinger mail directly.
 
 ### 8.5 Site vs email address
 
-The website footer currently shows **`gintare@messduija.lt`**.  
-When your real mailbox is ready, update email in **all footers** + **kontaktai.html** to match (e.g. `gintare@messtudija.lt`).
+The website footer shows **`gintare@messtudija.lt`** — keep in sync with Hostinger mailbox and Formspree inbox.
 
 ---
 

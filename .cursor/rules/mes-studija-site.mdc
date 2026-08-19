@@ -44,6 +44,6 @@ Repo: `github.com/gintaregutauskaite/messtudija` (public). Human setup steps: `S
 
 - Match existing patterns; minimal diffs
 - Keep copy in **Lithuanian**
-- Contact email on site: `gintare@messduija.lt` — update all footers + kontaktai if changed
+- Contact email on site: `gintare@messtudija.lt` — update all footers + kontaktai if changed
 - Instagram: `@mes.studija` → `https://www.instagram.com/mes.studija/`
 - Do not create git commits unless the user asks

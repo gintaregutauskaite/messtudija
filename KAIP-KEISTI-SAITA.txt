@@ -1,0 +1,53 @@
+mēs. svetainė — VISKAS VIENAME (nukopijuok ir saugok)
+======================================================
+
+KAS KAS YRA
+• Cursor — programa kompiuteryje, kur keiči svetainę
+• GitHub — saugo pakeitimus
+• Netlify — rodo svetainę internete: www.messtudija.lt
+
+
+KAIP PAKEISTI SVETAINĘ — 6 ŽINGSNIAI
+=====================================
+
+1. ATIDARYK PROJEKTĄ
+   Cursor → File → Open Folder → Documents\messtudija → Select Folder
+
+2. PARAŠYK KĄ NORI PAKEISTI (pokalbio langas Cursor)
+   Pvz.: Pakeisk Paslaugų puslapyje Mini kainą į nuo 9€/m²
+   Palauk kol Cursor padarys → spausk Priimti / Vykdyti
+
+3. PATIKRINK LOKALIAI PIRMA (savo kompiuteryje)
+   Ctrl + ` (terminalas) → įrašyk:
+   cd Documents\messtudija
+   python -m http.server 8080 --bind 127.0.0.1
+   Naršyklėje: http://127.0.0.1:8080/index.html
+   Ctrl + Shift + R jei senas vaizdas
+   Baigus: Ctrl + C terminale
+   Jei gerai — tik tada 4 žingsnis
+
+4. ĮKELK Į INTERNETĄ
+   Kairėje ikonėlė su šakute (Ctrl + Shift + G)
+   → aprašymas pvz. „Pakeičiau Mini kainą“
+   → Commit → Sync / Push
+   Arba Cursor pokalbyje: „Įkelk pakeitimus į svetainę“
+
+5. PATIKRINK GYVAI
+   Palauk 1–2 min → www.messtudija.lt → Ctrl + Shift + R
+
+6. AR PAVYKO?
+   app.netlify.com → messtudia2 → Deploys → Published
+
+
+SVARBU
+• Dirbk tik su Documents\messtudija
+• Pirmiausia lokaliai, paskui Commit + Push
+• Be Push svetainė internete neatsinaujins
+• Jei neveikia — rašyk Mariui + ekrano nuotrauka
+
+
+CURSOR PROMPTAI (kopijuok)
+• Pakeisk telefono numerį visur svetainėje į +370 ...
+• Pakeisk footer el. paštą į info@messtudija.lt
+• Kodėl mano pakeitimai nematyti internete?
+• Įkelk pakeitimus į svetainę
